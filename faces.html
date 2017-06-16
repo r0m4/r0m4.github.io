@@ -70,7 +70,18 @@
 				leftDiv.lastChild.onclick = function nextLevel (event) {
 					console.log('cklicked')
 					event.stopPropagation();
-					numberOfFaces += 5;
+					
+					if(numberOfFaces >= 200){
+						numberOfFaces += 200;
+					}
+					else if(numberOfFaces >= 80){
+						numberOfFaces += 30;
+					} else if(numberOfFaces >= 20){
+						numberOfFaces += 15;
+					} else if (numberOfFaces < 20){
+						numberOfFaces += 5;
+					} 
+					
 					level += 1;
 
 
